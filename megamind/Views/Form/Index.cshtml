@@ -1,0 +1,84 @@
+﻿@model IEnumerable<form>
+<!-- Modal Trigger Button -->
+<!-- Modal Trigger Button -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+    Open Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="myForm" method="post" action="/Form/Submit">
+                    <!-- Name -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <!-- Phone Number -->
+                    <div class="mb-3">
+                        <label for="phone_no" class="form-label">Phone No.</label>
+                        <input type="tel" class="form-control" id="phone_no" name="phone_no" required>
+                    </div>
+                    <!-- Address -->
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address" name="address">
+                    </div>
+                    <!-- State -->
+                    <div class="mb-3">
+                        <label for="state" class="form-label">State</label>
+                        <select class="form-control" id="state" name="state" required>
+                            <option value="">Select State</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                        </select>
+                    </div>
+                    <!-- City -->
+                    <div class="mb-3">
+                        <label for="city" class="form-label">City</label>
+                        <select class="form-control" id="city" name="city" required>
+                            <option value="">Select City</option>
+                            <!-- Options for Gujarat -->
+                            <option value="Surat" data-state="Gujarat">Surat</option>
+                            <option value="Bardoli" data-state="Gujarat">Bardoli</option>
+                            <option value="Baroda" data-state="Gujarat">Baroda</option>
+                            <!-- Options for Maharashtra -->
+                            <option value="Mumbai" data-state="Maharashtra">Mumbai</option>
+                            <option value="Pune" data-state="Maharashtra">Pune</option>
+                        </select>
+                    </div>
+                    <!-- Agree Checkbox -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="agree" name="agree" required>
+                        <label class="form-check-label" for="agree">I agree to the terms and conditions</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" form="myForm" class="btn btn-primary" id="submitBtn" disabled>Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Enable/disable submit button based on checkbox state
+    const checkbox = document.getElementById('agree');
+    const submitBtn = document.getElementById('submitBtn');
+
+    checkbox.addEventListener('change', function () {
+        submitBtn.disabled = !checkbox.checked;
+    });
+</script>

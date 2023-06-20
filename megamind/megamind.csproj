@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>963e02b2-6374-4eac-8580-a140c09a9085</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\darshan\megamind\megamind\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\darshan\megamind\megamind\.editorconfig" />
+    <None Include="D:\darshan\megamind\MegaMind\Models\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.18" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\darshan\megamind\MegaMind\Models\.editorconfig" />
+  </ItemGroup>
+
+</Project>
