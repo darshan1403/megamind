@@ -1,11 +1,5 @@
-﻿@model IEnumerable<form>
-<!-- Modal Trigger Button -->
-<!-- Modal Trigger Button -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-    Open Modal
-</button>
+﻿<!-- Modal -->
 
-<!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -74,6 +68,12 @@
 </div>
 
 <script>
+    // Initialize the modal on page load
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = new bootstrap.Modal(document.getElementById('myModal'));
+        modal.show();
+    });
+
     // Enable/disable submit button based on checkbox state
     const checkbox = document.getElementById('agree');
     const submitBtn = document.getElementById('submitBtn');
