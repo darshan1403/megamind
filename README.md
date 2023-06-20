@@ -48,7 +48,10 @@ Folder Structure
 The project's folder structure is as follows:
 
 Controllers/: Contains the controllers for handling user registration and data management.
+
 Models/: Contains the data models used in the project.
+
 Views/: Contains the Razor views for rendering HTML templates.
+
 Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
