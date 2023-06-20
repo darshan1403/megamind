@@ -1,0 +1,44 @@
+﻿@model form
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+<h4>View Details </h4> 
+<hr /> 
+<div class="row"> 
+    <div class="col-md-4"> 
+        <form asp-action="UpdateDetails">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" /> 
+            <div class="form-group"> 
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" /> 
+            </div>
+            <div class="form-group"> 
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone_No" class="control-label"></label>
+                <input asp-for="Phone_No" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type ="submit" value="Save" class="btn=btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
